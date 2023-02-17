@@ -20,8 +20,17 @@
     padding:10px;
     background-color:rgba(55, 194, 212, 0.6);
     position: absolute;
-    top: 0;
+    top: 500px;
+    right: 50px;
     z-index: 1000;
    
+}
+#icon{
+    width:60px;
+    height:60px;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    margin: auto;
 }
 #map { height: 100vh; }

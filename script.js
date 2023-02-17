@@ -1,7 +1,7 @@
 let lat;
 let lon;
 let locationname=document.getElementById("locationname");
-let icon = document.getElementById("icon");
+let setIcon = document.getElementById("icon");
 let description=document.getElementById("description");
 // let temperature=document.getElementById("temperature");
 let minTemp=document.getElementById("minTemp");
@@ -72,6 +72,7 @@ if(navigator.geolocation){
         const{name}=data.name;
         const{temp,temp_min,temp_max}=data.main;
         const{speed}=data.wind;
+        const{icon}=data.weather[0];
 
 
       // Changing after Fetch api in Html page  
@@ -82,6 +83,31 @@ if(navigator.geolocation){
         minTemp.innerHTML="Min-temp:"+temp_min;
         maxTemp.innerHTML="Max-temp:"+temp_max;
         document.getElementById("windSpeed").innerHTML=speed;
+        setIcon.style["background-image"]=`url(${setIconFunction(icon)})`
 
     }
-   
+    function setIconFunction(icon) {
+ 
+        const icons = {
+            "01d": "./animated/day.svg",
+            "02d": "./animated/cloudy-day-1.svg",
+            "03d": "./animated/cloudy-day-2.svg",
+            "04d": "./animated/cloudy-day-3.svg",
+            "09d": "./animated/rainy-1.svg",
+            "10d": "./animated/rainy-2.svg",
+            "11d": "./animated/rainy-3.svg",
+            "13d": "./animated/snowy-6.svg",
+            "50d": "./animated/mist.svg",
+            "01n": "./animated/night.svg",
+            "02n": "./animated/cloudy-night-1.svg",
+            "03n": "./animated/cloudy-night-2.svg",
+            "04n": "./animated/cloudy-night-3.svg",
+            "09n": "./animated/rainy-1.svg",
+            "10n": "./animated/rainy-2.svg",
+            "11n": "./animated/rainy-3.svg",
+            "13n": "./animated/snowy-6.svg",
+            "50n": "./animated/mist.svg"
+        };
+     
+        return icons[icon];
+    }
