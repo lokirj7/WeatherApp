@@ -1,0 +1,27 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: 10px;
+}
+#locationname{
+    font-size: 30px;
+}
+#decription{
+    font-size: 30px;
+}
+#temp{
+    font-size: 40px;
+}
+.container{
+    border:1px solid red;
+    width: 400px;
+    text-align: center;
+    border-radius: 6px;
+    padding:10px;
+    background-color:rgba(55, 194, 212, 0.6);
+    position: absolute;
+    top: 0;
+    z-index: 1000;
+   
+}
+#map { height: 100vh; }
