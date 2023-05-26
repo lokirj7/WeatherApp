@@ -78,7 +78,7 @@ if(navigator.geolocation){
       // Changing after Fetch api in Html page  
         locationname.innerHTML=data.name;
         description.innerHTML=data.weather[0].description;
-        console.log(temp)
+        console.log(temp+"")
         document.getElementById("temperature").innerHTML=temp;
         minTemp.innerHTML="Min-temp:"+temp_min;
         maxTemp.innerHTML="Max-temp:"+temp_max;
